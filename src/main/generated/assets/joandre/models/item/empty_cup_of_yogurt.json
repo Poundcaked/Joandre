@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "joandre:item/empty_yogurt"
+    "layer0": "joandre:item/empty_cup_of_yogurt"
   }
 }

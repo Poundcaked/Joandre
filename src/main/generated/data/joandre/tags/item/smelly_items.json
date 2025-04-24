@@ -1,0 +1,12 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:slime_ball",
+    "minecraft:rotten_flesh",
+    "joandre:disgusting_joandre_phone",
+    {
+      "id": "#minecraft:dirt",
+      "required": false
+    }
+  ]
+}

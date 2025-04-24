@@ -1,10 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "building",
   "ingredients": [
     "joandre:joandreite_block"
   ],
   "result": {
-    "id": "joandre:joandreite_ingot",
-    "count": 1
+    "count": 9,
+    "id": "joandre:joandreite_ingot"
   }
 }

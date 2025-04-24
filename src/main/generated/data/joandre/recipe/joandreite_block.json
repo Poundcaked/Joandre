@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "i": "joandre:joandreite_ingot"
+  },
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:joandreite_block"
+  }
+}

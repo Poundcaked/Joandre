@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "R": "minecraft:redstone",
+    "c": "minecraft:copper_ingot",
+    "i": "joandre:joandreite_ingot"
+  },
+  "pattern": [
+    "iii",
+    "ici",
+    "iRi"
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:joandre_phone"
+  }
+}

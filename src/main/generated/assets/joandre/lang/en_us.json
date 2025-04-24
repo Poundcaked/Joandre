@@ -1,19 +1,12 @@
 {
-  "item.joandre.joandre_phone": "Joandre's Phone",
+  "item.joandre.blueberries": "Blueberries",
   "item.joandre.disgusting_joandre_phone": "Joandre's Disgusting Phone",
-
   "item.joandre.empty_cup_of_yogurt": "Empty Cup of Yogurt",
+  "item.joandre.joandre_phone": "Joandre's Phone",
+  "item.joandre.joandreite_block": "Joandreite Block",
+  "item.joandre.joandreite_ingot": "Joandreite Ingot",
   "item.joandre.strawberry_yogurt": "Strawberry Yogurt",
   "item.joandre.vanilla_yogurt": "Vanilla Yogurt",
-  "item.joandre.blueberries": "Blueberries",
-
-  "item.joandre.joandreite_ingot": "Joandreite Ingot",
-  "item.joandre.joandreite_block": "Joandreite Block",
-
-
-
-  "block.joandre.joandreite_block": "Joandreite Block",
-
   "itemGroup.joandre_armory": "Joandre's Armory",
   "itemGroup.joandre_kitchen": "Joandre's Kitchen"
 }
