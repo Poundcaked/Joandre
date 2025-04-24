@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "joandre",
+  "version": "${version}",
+  "name": "Joandre",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/joandre/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.gorgonine.joandre.client.JoandreDataGenerator"
+    ],
+    "client": [
+      "com.gorgonine.joandre.client.JoandreClient"
+    ],
+    "main": [
+      "com.gorgonine.joandre.Joandre"
+    ]
+  },
+  "mixins": [
+    "joandre.mixins.json",
+    {
+      "config": "joandre.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

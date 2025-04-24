@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "ici",
+    "iRi"
+  ],
+  "key": {
+    "i": "joandre:joandreite_ingot",
+    "c": "minecraft:copper_ingot",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "joandre:joandre_phone",
+    "count": 1
+  }
+}
