@@ -1,6 +1,7 @@
 package com.gorgonine.joandre.item.items_custom;
 
 import com.gorgonine.joandre.item.ModItems;
+import com.gorgonine.joandre.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -29,7 +30,7 @@ public class JoandrePhone extends Item {
                     ItemStack disgustingPhone = new ItemStack(ModItems.DISGUSTING_JOANDRE_PHONE);
                     player.setStackInHand(context.getHand(), disgustingPhone);
 
-                    world.playSound(null,context.getBlockPos(), SoundEvents.ITEM_BUCKET_EMPTY, SoundCategory.PLAYERS);
+                    world.playSound(null,context.getBlockPos(), ModSounds.EWWW, SoundCategory.PLAYERS);
                 }
             }
         }
