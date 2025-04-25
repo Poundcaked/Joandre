@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "joandre:item/gulch_you_again_music_disc"
+  }
+}

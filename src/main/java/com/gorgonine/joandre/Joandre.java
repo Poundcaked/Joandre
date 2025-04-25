@@ -18,6 +18,7 @@ public class Joandre implements ModInitializer {
         ModItems.initialize();
         ModBlocks.initialize();
         ModSounds.registerSounds();
+
         ModItemGroups.registerItemGroups();
         LOGGER.info("Joandre Initialized");
     }

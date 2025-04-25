@@ -1,7 +1,11 @@
 // 1.21.5	-999999999-01-01T00:00:00	Joandre/Joandre Recipe Provider
 50871b4d7bfe34eb5870edf4a980c655810d85bb data/joandre/advancement/recipes/building_blocks/joandreite_ingot.json
+aa7b79b65908ec8736d62b32d8eb78c66d0993ab data/joandre/advancement/recipes/misc/gulch_you_again_music_disc.json
 159b8fdb437c62b3542c7b5a0188b55113489fc1 data/joandre/advancement/recipes/misc/joandre_phone.json
 7e1d9a38bfd296395653d31a8cfdb8fd774f58ef data/joandre/advancement/recipes/misc/joandreite_block.json
+65ef5c46dff379e486620cacd90547ffed851576 data/joandre/advancement/recipes/misc/yogurt_bag.json
+d737e1e5b41c52f61efdd5163df31b8d65894114 data/joandre/recipe/gulch_you_again_music_disc.json
 395e6a5dd19882ee2f366893e03fe80cbf48c6eb data/joandre/recipe/joandre_phone.json
 c36d580e5e1c1ee28909a144fbdc5268531e5239 data/joandre/recipe/joandreite_block.json
 fc03c130b8c481beff330a08700350a73fbb5eab data/joandre/recipe/joandreite_ingot.json
+5c8e7cbb7eb499f9b92a5df06f91cc0271b730bd data/joandre/recipe/yogurt_bag.json

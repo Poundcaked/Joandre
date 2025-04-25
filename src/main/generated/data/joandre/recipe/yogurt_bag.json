@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "i": "minecraft:paper"
+  },
+  "pattern": [
+    "i i",
+    "i i",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:yogurt_bag"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.joandre.gulch_you_again_music_disc.desc"
+  },
+  "length_in_seconds": 180.0,
+  "sound_event": "joandre:gulch_you_again"
+}

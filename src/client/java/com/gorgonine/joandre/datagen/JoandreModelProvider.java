@@ -29,7 +29,11 @@ public class JoandreModelProvider  extends FabricModelProvider {
         itemModelGenerator.register(ModItems.EMPTY_YOGURT, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY_YOGURT, Models.GENERATED);
         itemModelGenerator.register(ModItems.VANILLA_YOGURT, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.BLUEBERRIES, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.YOGURT_BAG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GULCH_YOU_AGAIN_MUSIC_DISC, Models.GENERATED);
     }
 
     @Override

@@ -4,5 +4,13 @@
     "sounds": [
       "joandre:ewww"
     ]
+  },
+  "gulch_you_again": {
+    "sounds": [
+      {
+        "name": "joandre:gulch_you_again",
+        "stream": true
+      }
+    ]
   }
 }

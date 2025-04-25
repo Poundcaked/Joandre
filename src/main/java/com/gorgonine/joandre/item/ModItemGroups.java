@@ -17,6 +17,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.JOANDRE_PHONE);
                         entries.add(ModItems.DISGUSTING_JOANDRE_PHONE);
+                        entries.add(ModItems.GULCH_YOU_AGAIN_MUSIC_DISC);
+                        entries.add(ModItems.JOANDREITE_INGOT);
                     }).build());
     public static final ItemGroup JOANDRE_KITCHEN = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joandre.MOD_ID ,"joandre_kitchen"),
@@ -26,7 +28,10 @@ public class ModItemGroups {
                         entries.add(ModItems.EMPTY_YOGURT);
                         entries.add(ModItems.STRAWBERRY_YOGURT);
                         entries.add(ModItems.VANILLA_YOGURT);
+
                         entries.add(ModItems.BLUEBERRIES);
+
+                        entries.add(ModItems.YOGURT_BAG);
                     }).build());
 
     public static void registerItemGroups(){

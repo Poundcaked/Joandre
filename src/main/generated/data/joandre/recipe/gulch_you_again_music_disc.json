@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "i": "minecraft:flint",
+    "o": "joandre:joandreite_ingot"
+  },
+  "pattern": [
+    "iii",
+    "ioi",
+    "iii"
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:gulch_you_again_music_disc"
+  }
+}
