@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "joandre:block/blueberry_plant_stage0"
+    },
+    "age=1": {
+      "model": "joandre:block/blueberry_plant_stage1"
+    },
+    "age=2": {
+      "model": "joandre:block/blueberry_plant_stage2"
+    },
+    "age=3": {
+      "model": "joandre:block/blueberry_plant_stage3"
+    },
+    "age=4": {
+      "model": "joandre:block/blueberry_plant_stage4"
+    },
+    "age=5": {
+      "model": "joandre:block/blueberry_plant_stage5"
+    },
+    "age=6": {
+      "model": "joandre:block/blueberry_plant_stage6"
+    }
+  }
+}

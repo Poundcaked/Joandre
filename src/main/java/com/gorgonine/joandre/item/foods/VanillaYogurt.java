@@ -17,7 +17,6 @@ public class VanillaYogurt extends Item{
         super.finishUsing(stack,world,user);
 
         if(user instanceof PlayerEntity player && !player.getAbilities().creativeMode){
-            stack.decrement(1);
 
             ItemStack emptyYogurt = new ItemStack(ModItems.EMPTY_YOGURT);
 

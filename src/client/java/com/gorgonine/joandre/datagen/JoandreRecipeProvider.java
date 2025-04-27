@@ -2,7 +2,7 @@ package com.gorgonine.joandre.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.gorgonine.joandre.block.ModBlocks;
+import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItems;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
@@ -54,26 +54,36 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .group("multi_bench")
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.YOGURT_BAG, 1)
+                createShaped(RecipeCategory.MISC, ModItems.EMPTY_YOGURT_BAG, 1)
                         .pattern("i i")
                         .pattern("i i")
                         .pattern(" I ")
                         .input('i', Items.PAPER)
-                        .input('I', Items.IRON_INGOT)
+                        .input('I', Items.IRON_NUGGET)
                         .criterion(hasItem(Items.PAPER),conditionsFromItem(Items.PAPER))
                         .criterion(hasItem(Items.IRON_INGOT),conditionsFromItem(Items.IRON_INGOT))
                         .group("multi_bench")
                         .offerTo(exporter);
 
-//                createShaped(RecipeCategory.FOOD, ModItems.YOGURT_BAG ,1)
-//                        .pattern("i i")
-//                        .pattern("ibi")
-//                        .pattern(" I ")
-//                        .input('i', Items.PAPER)
-//                        .input('I', Items.IRON_INGOT)
-//                        .input('b', ModItems.BLUEBERRIES)
-//                        .criterion(hasItem(ModItems.BLUEBERRIES), conditionsFromItem(ModItems.BLUEBERRIES))
-//                        .offerTo(exporter);
+                createShaped(RecipeCategory.FOOD, ModItems.BLUEBERRY_YOGURT_BAG ,1)
+                        .pattern("i i")
+                        .pattern("ibi")
+                        .pattern(" I ")
+                        .input('i', Items.PAPER)
+                        .input('I', Items.IRON_NUGGET)
+                        .input('b', ModItems.BLUEBERRIES)
+                        .criterion(hasItem(ModItems.BLUEBERRIES), conditionsFromItem(ModItems.BLUEBERRIES))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.FOOD, ModItems.STRAWBERRY_YOGURT_BAG ,1)
+                        .pattern("i i")
+                        .pattern("isi")
+                        .pattern(" I ")
+                        .input('i', Items.PAPER)
+                        .input('I', Items.IRON_NUGGET)
+                        .input('s', ModItems.STRAWBERRIES)
+                        .criterion(hasItem(ModItems.STRAWBERRIES), conditionsFromItem(ModItems.STRAWBERRIES))
+                        .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModItems.GULCH_YOU_AGAIN_MUSIC_DISC, 1)
                         .pattern("iii")

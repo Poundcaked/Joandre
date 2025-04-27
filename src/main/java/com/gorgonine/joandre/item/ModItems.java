@@ -3,18 +3,24 @@ package com.gorgonine.joandre.item;
 import com.gorgonine.joandre.Joandre;
 import com.gorgonine.joandre.item.foods.StrawberryYogurt;
 import com.gorgonine.joandre.item.foods.VanillaYogurt;
-import com.gorgonine.joandre.item.items.JoandrePhone;
-import com.gorgonine.joandre.item.items.YogurtBag;
+import com.gorgonine.joandre.item.items.*;
 import com.gorgonine.joandre.sound.ModSounds;
+import com.gorgonine.joandre.util.ModComponents;
+import com.gorgonine.joandre.util.ModTags;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.WeaponComponent;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import org.spongepowered.include.com.google.common.base.Function;
+
+import static net.minecraft.item.Items.register;
 
 public class ModItems {
     public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
@@ -33,13 +39,22 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ModItems.STRAWBERRY_YOGURT));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ModItems.VANILLA_YOGURT));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ModItems.YOGURT_BAG));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ModItems.EMPTY_YOGURT_BAG));
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ModItems.BLUEBERRIES));
 
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemGroup) -> itemGroup.add(ModItems.DISGUSTING_JOANDRE_PHONE));
     }
+
+    public static final ToolMaterial PISRATIUM_TOOL_MATERIAL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            1984,
+            9.0F,
+            4.0F,
+            30,
+            ModTags.Items.PISRATIUM_REPAIRABLE
+    );
 
     public static final Item GULCH_YOU_AGAIN_MUSIC_DISC = registerItem("gulch_you_again_music_disc", Item::new, new Item.Settings()
             .jukeboxPlayable(ModSounds.GULCH_YOU_AGAIN_KEY).maxCount(1)
@@ -54,13 +69,60 @@ public class ModItems {
     );
     public static final Item JOANDREITE_INGOT = registerItem("joandreite_ingot", Item::new, new Item.Settings());
 
+    public static final Item PISRAT_HAMMER = registerItem("pisrat_hammer", PisratHammer::new,new Item.Settings()
+            .maxCount(1)
+            .maxDamage(3300)
+            .attributeModifiers(PisratHammer.createAttributeModifiers())
+            .rarity(Rarity.EPIC)
+            .component(DataComponentTypes.TOOL, PisratHammer.createToolComponent())
+            .component(DataComponentTypes.WEAPON, new WeaponComponent(1))
+
+    );
+
+    //YOGURT **CUPS**
     public static final Item EMPTY_YOGURT = registerItem("empty_yogurt", Item::new, new Item.Settings());
     public static final Item STRAWBERRY_YOGURT = registerItem("strawberry_yogurt", StrawberryYogurt::new, new Item.Settings().food(ModFoodComponents.STRAWBERRY_YOGURT));
     public static final Item VANILLA_YOGURT = registerItem("vanilla_yogurt", VanillaYogurt::new, new Item.Settings().food(ModFoodComponents.VANILLA_YOGURT));
-    public static final Item BLUEBERRIES = registerItem("blueberries", VanillaYogurt::new, new Item.Settings().food(ModFoodComponents.BLUEBERRIES));
+    public static final Item BLUEBERRY_YOGURT = registerItem("blueberry_yogurt", BlueberryYogurtBag::new, new Item.Settings().food(ModFoodComponents.BLUEBERRY_YOGURT));
 
-    public static final Item YOGURT_BAG = registerItem("yogurt_bag", YogurtBag::new, new Item.Settings()
+    //CROPS
+
+    public static final Item BLUEBERRIES = registerItem("blueberries", Item::new, new Item.Settings()
+            .food(ModFoodComponents.BLUEBERRIES)
+            .maxCount(16)
+
+    );
+
+    public static final Item STRAWBERRIES = registerItem("strawberries", Item::new, new Item.Settings()
+            .food(ModFoodComponents.STRAWBERRIES)
+            .maxCount(16)
+
+    );
+
+    public static final Item BLUEBERRY_SEEDS = registerItem(
+            "blueberry_seeds",
+            settings -> new BlockItem(ModBlocks.BLUEBERRIES_CROP, settings),
+            new Item.Settings()
+    );
+
+
+    //BAGS
+
+    public static final Item EMPTY_YOGURT_BAG = registerItem("empty_yogurt_bag", Item::new, new Item.Settings()
             .maxCount(3)
+            .component(ModComponents.YOGURT_LEVEL_COMPONENT,0)
+    );
+    public static final Item VANILLA_YOGURT_BAG = registerItem("vanilla_yogurt_bag", VanillaYogurtBag::new, new Item.Settings()
+            .maxCount(3)
+            .component(ModComponents.YOGURT_LEVEL_COMPONENT,100)
+    );
+    public static final Item STRAWBERRY_YOGURT_BAG = registerItem("strawberry_yogurt_bag", StrawberryYogurtBag::new, new Item.Settings()
+            .maxCount(3)
+            .component(ModComponents.YOGURT_LEVEL_COMPONENT,100)
+    );
+    public static final Item BLUEBERRY_YOGURT_BAG = registerItem("blueberry_yogurt_bag", BlueberryYogurtBag::new, new Item.Settings()
+            .maxCount(3)
+            .component(ModComponents.YOGURT_LEVEL_COMPONENT,100)
     );
 
 

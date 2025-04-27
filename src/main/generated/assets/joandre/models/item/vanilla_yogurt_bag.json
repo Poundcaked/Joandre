@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "joandre:item/yogurt_bag"
+    "layer0": "joandre:item/vanilla_yogurt_bag"
   }
 }

@@ -11,8 +11,12 @@ public class JoandreDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(JoandreEnglishLangProvider::new);
         pack.addProvider(JoandreRecipeProvider::new);
+
         pack.addProvider(JoandreItemTagProvider::new);
+        pack.addProvider(JoandreBlockTagProvider::new);
+
         pack.addProvider(JoandreBlockLootTableProvider::new);
+
         pack.addProvider(JoandreModelProvider::new);
 
     }

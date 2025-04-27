@@ -1,9 +1,11 @@
 package com.gorgonine.joandre.datagen;
 
 import com.gorgonine.joandre.Joandre;
+import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;

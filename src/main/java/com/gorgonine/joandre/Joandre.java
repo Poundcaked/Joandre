@@ -1,9 +1,11 @@
 package com.gorgonine.joandre;
 
-import com.gorgonine.joandre.block.ModBlocks;
+import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItemGroups;
 import com.gorgonine.joandre.item.ModItems;
 import com.gorgonine.joandre.sound.ModSounds;
+import com.gorgonine.joandre.util.ModComponents;
+import com.gorgonine.joandre.util.ModServerEvents;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +19,13 @@ public class Joandre implements ModInitializer {
     public void onInitialize() {
         ModItems.initialize();
         ModBlocks.initialize();
+
         ModSounds.registerSounds();
+        ModComponents.initialize();
 
         ModItemGroups.registerItemGroups();
+
+        ModServerEvents.initialize();
         LOGGER.info("Joandre Initialized");
     }
 }
