@@ -1,8 +1,7 @@
 package com.gorgonine.joandre.item;
 
 import com.gorgonine.joandre.Joandre;
-import com.gorgonine.joandre.item.blocks.BlueberryCropBlock;
-import com.gorgonine.joandre.item.blocks.YogurtStainBlock;
+import com.gorgonine.joandre.item.blocks.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -107,8 +106,43 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .burnable()
                     .noCollision()
-                    .mapColor(MapColor.DARK_GREEN),
+                    .mapColor(MapColor.DARK_AQUA),
             false
+    );
+
+    public static final Block STRAWBERRIES_CROP = register(
+            "strawberry_plant",
+            StrawberryCropBlock::new,
+            AbstractBlock.Settings.create()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .burnable()
+                    .noCollision()
+                    .mapColor(MapColor.DARK_CRIMSON),
+            false
+    );
+
+    public static final Block VANILLA_PLANT = register(
+            "vanilla_plant",
+            VanillaBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.GREEN)
+                    .ticksRandomly()
+                    .strength(0.2F, 3.0F)
+                    .sounds(BlockSoundGroup.SMALL_DRIPLEAF)
+                    .nonOpaque()
+                    .pistonBehavior(PistonBehavior.DESTROY),
+            false
+    );
+
+    public static final Block YOGURT_MACHINE = register(
+            "yogurt_machine",
+            YogurtMachineBlock::new,
+            AbstractBlock.Settings.create()
+                    .nonOpaque(),
+            true
     );
 
 }

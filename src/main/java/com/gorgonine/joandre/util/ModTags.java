@@ -18,6 +18,8 @@ public class ModTags {
 
     public static class Items{
         public static final TagKey<Item> PISRATIUM_REPAIRABLE = createTag("pisratium_repairable");
+        public static final TagKey<Item> YOGURT_BAGS = createTag("yogurt_bags");
+
         private static TagKey<Item> createTag(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(Joandre.MOD_ID,name));
         }

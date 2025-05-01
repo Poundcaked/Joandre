@@ -3,6 +3,7 @@ package com.gorgonine.joandre.datagen;
 import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItems;
 import com.gorgonine.joandre.item.blocks.BlueberryCropBlock;
+import com.gorgonine.joandre.item.blocks.StrawberryCropBlock;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
@@ -19,6 +20,7 @@ public class JoandreModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JOANDREITE_BLOCK);
         blockStateModelGenerator.registerCrop(ModBlocks.BLUEBERRIES_CROP, BlueberryCropBlock.AGE, 0,1,2,3,4,5,6);
+        blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRIES_CROP, StrawberryCropBlock.AGE, 0,1,2,3,4,5,6);
 
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.VANILLA_YOGURT_STAIN);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BLUEBERRY_YOGURT_STAIN);
@@ -42,6 +44,7 @@ public class JoandreModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.BLUEBERRIES, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRIES, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VANILLA_BEANS, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.EMPTY_YOGURT_BAG, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY_YOGURT_BAG, Models.GENERATED);
@@ -49,6 +52,7 @@ public class JoandreModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLUEBERRY_YOGURT_BAG, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.GULCH_YOU_AGAIN_MUSIC_DISC, Models.GENERATED);
+
 
 
     }

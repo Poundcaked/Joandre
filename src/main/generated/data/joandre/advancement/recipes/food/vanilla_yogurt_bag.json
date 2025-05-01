@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "joandre:vanilla_yogurt_bag"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vanilla_beans": {
+      "conditions": {
+        "items": [
+          {
+            "items": "joandre:vanilla_beans"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vanilla_beans"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "joandre:vanilla_yogurt_bag"
+    ]
+  }
+}

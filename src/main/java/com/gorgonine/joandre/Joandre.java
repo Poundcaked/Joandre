@@ -3,6 +3,7 @@ package com.gorgonine.joandre;
 import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItemGroups;
 import com.gorgonine.joandre.item.ModItems;
+import com.gorgonine.joandre.item.blocks.entity.ModBlockEntities;
 import com.gorgonine.joandre.sound.ModSounds;
 import com.gorgonine.joandre.util.ModComponents;
 import com.gorgonine.joandre.util.ModServerEvents;
@@ -24,6 +25,8 @@ public class Joandre implements ModInitializer {
         ModComponents.initialize();
 
         ModItemGroups.registerItemGroups();
+
+        ModBlockEntities.registerBlockEntities();
 
         ModServerEvents.initialize();
         LOGGER.info("Joandre Initialized");

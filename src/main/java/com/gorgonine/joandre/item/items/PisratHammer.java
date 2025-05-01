@@ -23,7 +23,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.core.jmx.Server;
 
 import java.util.List;
 
@@ -92,6 +91,7 @@ public class PisratHammer extends Item {
             serverWorld.spawnParticles(ParticleTypes.EXPLOSION,serverPlayerEntity.getX(),serverPlayerEntity.getY(),serverPlayerEntity.getZ(), 100, 0.3F, 0.3F, 0.3F, 0.15F);
             itemCooldownManager.set(context.getStack(),200);
 
+            serverPlayerEntity.setIgnoreFallDamageFromCurrentExplosion(true);
             serverPlayerEntity.networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(serverPlayerEntity));
 
             world.playSound(null, serverPlayerEntity.getX(), serverPlayerEntity.getY(), serverPlayerEntity.getZ(), SoundEvents.BLOCK_BEACON_DEACTIVATE, serverPlayerEntity.getSoundCategory(), 1.0F, 1.0F);

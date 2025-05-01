@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "joandre:empty_yogurt_bag",
+    "joandre:blueberries",
+    "joandre:blueberries",
+    "joandre:blueberries"
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:blueberry_yogurt_bag"
+  }
+}

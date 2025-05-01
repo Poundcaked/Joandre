@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GULCH_YOU_AGAIN_MUSIC_DISC);
                         entries.add(ModItems.JOANDREITE_INGOT);
                         entries.add(ModItems.PISRAT_HAMMER);
+                        entries.add(ModBlocks.YOGURT_MACHINE);
                     }).build());
     public static final ItemGroup JOANDRE_KITCHEN = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joandre.MOD_ID ,"joandre_kitchen"),
@@ -33,8 +34,10 @@ public class ModItemGroups {
 
                         entries.add(ModItems.BLUEBERRIES);
                         entries.add(ModItems.STRAWBERRIES);
+                        entries.add(ModItems.VANILLA_BEANS);
 
                         entries.add(ModItems.BLUEBERRY_SEEDS);
+                        entries.add(ModItems.STRAWBERRY_SEEDS);
 
                         entries.add(ModItems.EMPTY_YOGURT_BAG);
                         entries.add(ModItems.VANILLA_YOGURT_BAG);

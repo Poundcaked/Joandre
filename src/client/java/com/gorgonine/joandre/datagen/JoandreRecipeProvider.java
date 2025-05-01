@@ -85,6 +85,35 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.STRAWBERRIES), conditionsFromItem(ModItems.STRAWBERRIES))
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.FOOD, ModItems.VANILLA_YOGURT_BAG ,1)
+                        .pattern("i i")
+                        .pattern("ivi")
+                        .pattern(" I ")
+                        .input('i', Items.PAPER)
+                        .input('I', Items.IRON_NUGGET)
+                        .input('v', ModItems.VANILLA_BEANS)
+                        .criterion(hasItem(ModItems.VANILLA_BEANS), conditionsFromItem(ModItems.VANILLA_BEANS))
+                        .offerTo(exporter);
+//SHAPELESS BAGS
+                createShapeless(RecipeCategory.MISC, ModItems.STRAWBERRY_YOGURT_BAG, 1)
+                        .input(ModItems.EMPTY_YOGURT_BAG)
+                        .input(ModItems.STRAWBERRIES,3)
+                        .criterion(hasItem(ModItems.EMPTY_YOGURT_BAG), conditionsFromItem(ModItems.EMPTY_YOGURT_BAG))
+                        .criterion(hasItem(ModItems.STRAWBERRIES), conditionsFromItem(ModItems.STRAWBERRIES))
+                        .offerTo(exporter,"shapeless_strawberry_bag");
+                createShapeless(RecipeCategory.MISC, ModItems.BLUEBERRY_YOGURT_BAG, 1)
+                        .input(ModItems.EMPTY_YOGURT_BAG)
+                        .input(ModItems.BLUEBERRIES,3)
+                        .criterion(hasItem(ModItems.EMPTY_YOGURT_BAG), conditionsFromItem(ModItems.EMPTY_YOGURT_BAG))
+                        .criterion(hasItem(ModItems.BLUEBERRIES), conditionsFromItem(ModItems.BLUEBERRIES))
+                        .offerTo(exporter,"shapeless_blueberry_bag");
+                createShapeless(RecipeCategory.MISC, ModItems.VANILLA_YOGURT_BAG, 1)
+                        .input(ModItems.EMPTY_YOGURT_BAG)
+                        .input(ModItems.VANILLA_BEANS,3)
+                        .criterion(hasItem(ModItems.EMPTY_YOGURT_BAG), conditionsFromItem(ModItems.EMPTY_YOGURT_BAG))
+                        .criterion(hasItem(ModItems.VANILLA_BEANS), conditionsFromItem(ModItems.VANILLA_BEANS))
+                        .offerTo(exporter,"shapeless_vanilla_bag");
+
                 createShaped(RecipeCategory.MISC, ModItems.GULCH_YOU_AGAIN_MUSIC_DISC, 1)
                         .pattern("iii")
                         .pattern("ioi")

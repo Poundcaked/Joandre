@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "minecraft:iron_nugget",
+    "i": "minecraft:paper",
+    "v": "joandre:vanilla_beans"
+  },
+  "pattern": [
+    "i i",
+    "ivi",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:vanilla_yogurt_bag"
+  }
+}
