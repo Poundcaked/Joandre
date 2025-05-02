@@ -1,3 +1,188 @@
 {
-  "parent": "joandre:block/yogurt_machine"
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "joandre:block/vanilla_button_texture",
+    "1": "joandre:block/strawberry_button_texture",
+    "2": "joandre:block/blueberry_button_texture",
+    "3": "joandre:block/joandreite_block",
+    "4": "minecraft:block/smooth_stone",
+    "5": "minecraft:block/iron_block",
+    "particle": "joandre:block/joandreite_block"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 6],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+        "east": {"uv": [0, 0, 10, 16], "texture": "#3"},
+        "south": {"uv": [0, 0, 16, 16], "texture": "#3"},
+        "west": {"uv": [0, 0, 10, 16], "texture": "#3"},
+        "up": {"uv": [0, 0, 16, 10], "texture": "#3"},
+        "down": {"uv": [0, 0, 16, 10], "texture": "#3"}
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 3, 6],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 3], "texture": "#4"},
+        "east": {"uv": [0, 0, 6, 3], "texture": "#4"},
+        "south": {"uv": [0, 0, 16, 3], "texture": "#4"},
+        "west": {"uv": [10, 0, 16, 3], "texture": "#4"},
+        "up": {"uv": [0, 0, 16, 6], "texture": "#4"},
+        "down": {"uv": [0, 6, 16, 0], "texture": "#4"}
+      }
+    },
+    {
+      "name": "Spout",
+      "from": [3, 9, 1],
+      "to": [5, 11, 3],
+      "rotation": {"angle": 0, "axis": "y", "origin": [3, 9, 1]},
+      "faces": {
+        "north": {"uv": [11, 14, 13, 16], "texture": "#5"},
+        "east": {"uv": [0, 14, 2, 16], "texture": "#5"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "west": {"uv": [14, 14, 16, 16], "texture": "#5"},
+        "up": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "down": {"uv": [0, 0, 2, 2], "texture": "#5"}
+      }
+    },
+    {
+      "name": "Spout",
+      "from": [3, 11, 1],
+      "to": [5, 13, 6],
+      "rotation": {"angle": 0, "axis": "y", "origin": [3, 11, 1]},
+      "faces": {
+        "north": {"uv": [8, 7, 10, 9], "texture": "#5"},
+        "east": {"uv": [0, 14, 5, 16], "texture": "#5"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "west": {"uv": [11, 14, 16, 16], "texture": "#5"},
+        "up": {"uv": [7, 11, 9, 16], "texture": "#5"},
+        "down": {"uv": [0, 0, 2, 5], "texture": "#5"}
+      }
+    },
+    {
+      "name": "Spout",
+      "from": [7, 9, 1],
+      "to": [9, 11, 3],
+      "rotation": {"angle": 0, "axis": "y", "origin": [7, 9, 1]},
+      "faces": {
+        "north": {"uv": [11, 14, 13, 16], "texture": "#5"},
+        "east": {"uv": [0, 14, 2, 16], "texture": "#5"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "west": {"uv": [14, 14, 16, 16], "texture": "#5"},
+        "up": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "down": {"uv": [0, 0, 2, 2], "texture": "#5"}
+      }
+    },
+    {
+      "name": "Spout",
+      "from": [7, 11, 1],
+      "to": [9, 13, 6],
+      "rotation": {"angle": 0, "axis": "y", "origin": [7, 11, 1]},
+      "faces": {
+        "north": {"uv": [8, 7, 10, 9], "texture": "#5"},
+        "east": {"uv": [0, 14, 5, 16], "texture": "#5"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "west": {"uv": [11, 14, 16, 16], "texture": "#5"},
+        "up": {"uv": [7, 11, 9, 16], "texture": "#5"},
+        "down": {"uv": [0, 0, 2, 5], "texture": "#5"}
+      }
+    },
+    {
+      "name": "Spout",
+      "from": [11, 9, 1],
+      "to": [13, 11, 3],
+      "rotation": {"angle": 0, "axis": "y", "origin": [11, 9, 1]},
+      "faces": {
+        "north": {"uv": [11, 14, 13, 16], "texture": "#5"},
+        "east": {"uv": [0, 14, 2, 16], "texture": "#5"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "west": {"uv": [14, 14, 16, 16], "texture": "#5"},
+        "up": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "down": {"uv": [0, 0, 2, 2], "texture": "#5"}
+      }
+    },
+    {
+      "name": "Spout",
+      "from": [11, 11, 1],
+      "to": [13, 13, 6],
+      "rotation": {"angle": 0, "axis": "y", "origin": [11, 11, 1]},
+      "faces": {
+        "north": {"uv": [8, 7, 10, 9], "texture": "#5"},
+        "east": {"uv": [0, 14, 5, 16], "texture": "#5"},
+        "south": {"uv": [0, 0, 2, 2], "texture": "#5"},
+        "west": {"uv": [11, 14, 16, 16], "texture": "#5"},
+        "up": {"uv": [7, 11, 9, 16], "texture": "#5"},
+        "down": {"uv": [0, 0, 2, 5], "texture": "#5"}
+      }
+    },
+    {
+      "from": [3, 5, 4],
+      "to": [5, 7, 6],
+      "rotation": {"angle": 0, "axis": "y", "origin": [3, 5, 4]},
+      "faces": {
+        "north": {"uv": [0, 0, 2, 2], "texture": "#2"},
+        "east": {"uv": [0, 2, 2, 4], "texture": "#2"},
+        "south": {"uv": [2, 0, 4, 2], "texture": "#2"},
+        "west": {"uv": [2, 2, 4, 4], "texture": "#2"},
+        "up": {"uv": [2, 6, 0, 4], "texture": "#2"},
+        "down": {"uv": [6, 0, 4, 2], "texture": "#2"}
+      }
+    },
+    {
+      "from": [7, 5, 4],
+      "to": [9, 7, 6],
+      "rotation": {"angle": 0, "axis": "y", "origin": [7, 5, 4]},
+      "faces": {
+        "north": {"uv": [0, 0, 2, 2], "texture": "#1"},
+        "east": {"uv": [0, 2, 2, 4], "texture": "#1"},
+        "south": {"uv": [2, 0, 4, 2], "texture": "#1"},
+        "west": {"uv": [2, 2, 4, 4], "texture": "#1"},
+        "up": {"uv": [2, 6, 0, 4], "texture": "#1"},
+        "down": {"uv": [6, 0, 4, 2], "texture": "#1"}
+      }
+    },
+    {
+      "from": [11, 5, 4],
+      "to": [13, 7, 6],
+      "rotation": {"angle": 0, "axis": "y", "origin": [11, 5, 4]},
+      "faces": {
+        "north": {"uv": [0, 0, 2, 2], "texture": "#0"},
+        "east": {"uv": [0, 2, 2, 4], "texture": "#0"},
+        "south": {"uv": [2, 0, 4, 2], "texture": "#0"},
+        "west": {"uv": [2, 2, 4, 4], "texture": "#0"},
+        "up": {"uv": [2, 6, 0, 4], "texture": "#0"},
+        "down": {"uv": [6, 0, 4, 2], "texture": "#0"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "scale": [0.25781, 0.25781, 0.25781]
+    },
+    "thirdperson_lefthand": {
+      "scale": [0.25195, 0.25195, 0.25195]
+    },
+    "firstperson_righthand": {
+      "rotation": [137.47, 29.35, -118.12],
+      "translation": [0, 2, 0],
+      "scale": [0.48438, 0.48438, 0.48438]
+    },
+    "firstperson_lefthand": {
+      "rotation": [128.27, 34.5, -114.07],
+      "translation": [0, 1.75, 0],
+      "scale": [0.43359, 0.43359, 0.43359]
+    },
+    "ground": {
+      "translation": [0, 1.75, 0],
+      "scale": [0.28906, 0.28906, 0.28906]
+    },
+    "gui": {
+      "rotation": [-180, 23, -180],
+      "translation": [-0.25, 0, 0],
+      "scale": [0.75391, 0.75391, 0.75391]
+    }
+  }
 }

@@ -19,6 +19,8 @@ public class JoandreModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JOANDREITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JOANDREITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_JOANDREITE_ORE);
         blockStateModelGenerator.registerCrop(ModBlocks.BLUEBERRIES_CROP, BlueberryCropBlock.AGE, 0,1,2,3,4,5,6);
         blockStateModelGenerator.registerCrop(ModBlocks.STRAWBERRIES_CROP, StrawberryCropBlock.AGE, 0,1,2,3,4,5,6);
 
@@ -33,6 +35,7 @@ public class JoandreModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.JOANDREITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JOANDREITE_SHARD,Models.GENERATED);
 
         itemModelGenerator.register(ModItems.JOANDRE_PHONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DISGUSTING_JOANDRE_PHONE, Models.GENERATED);

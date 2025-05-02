@@ -7,6 +7,7 @@ import com.gorgonine.joandre.item.blocks.entity.ModBlockEntities;
 import com.gorgonine.joandre.sound.ModSounds;
 import com.gorgonine.joandre.util.ModComponents;
 import com.gorgonine.joandre.util.ModServerEvents;
+import com.gorgonine.joandre.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,8 @@ public class Joandre implements ModInitializer {
         ModBlockEntities.registerBlockEntities();
 
         ModServerEvents.initialize();
+
+        ModWorldGeneration.generateModWorldGen();
         LOGGER.info("Joandre Initialized");
     }
 }

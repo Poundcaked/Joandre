@@ -56,6 +56,25 @@ public class ModBlocks {
             true
 
     );
+    public static final Block JOANDREITE_ORE = register(
+            "joandreite_ore",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.STONE)
+                    .strength(3f),
+            true
+    );
+
+    public static final Block DEEPSLATE_JOANDREITE_ORE = register(
+            "deepslate_joandreite_ore",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE)
+                    .strength(4f),
+            true
+    );
 
     public static final Block VANILLA_YOGURT_STAIN = register(
             "vanilla_yogurt_stain",
@@ -144,5 +163,6 @@ public class ModBlocks {
                     .nonOpaque(),
             true
     );
+
 
 }

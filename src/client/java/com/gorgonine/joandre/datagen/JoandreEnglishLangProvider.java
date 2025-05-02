@@ -45,7 +45,10 @@ public class JoandreEnglishLangProvider extends FabricLanguageProvider {
 
 
         translationBuilder.add("item.joandre.joandreite_ingot", "Joandreite Ingot");
+        translationBuilder.add("item.joandre.joandreite_shard", "Joandreite Shard");
         translationBuilder.add("item.joandre.joandreite_block", "Joandreite Block");
+        translationBuilder.add("item.joandre.joandreite_ore", "Joandreite Ore");
+        translationBuilder.add("item.joandre.deepslate_joandreite_ore", "Deepslate Joandreite Ore");
         translationBuilder.add("item.joandre.yogurt_machine", "Yogurt Machine");
 
         translationBuilder.add("itemGroup.joandre_armory", "Joandre's Armory");

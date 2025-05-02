@@ -22,6 +22,9 @@ public class JoandreBlockLootTableProvider extends FabricBlockLootTableProvider 
     public void generate() {
         addDrop(ModBlocks.JOANDREITE_BLOCK);
 
+        addDrop(ModBlocks.JOANDREITE_ORE, oreDrops(ModBlocks.JOANDREITE_ORE,ModItems.JOANDREITE_SHARD));
+        addDrop(ModBlocks.DEEPSLATE_JOANDREITE_ORE, oreDrops(ModBlocks.JOANDREITE_ORE,ModItems.JOANDREITE_SHARD));
+
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.BLUEBERRIES_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(BlueberryCropBlock.AGE,6));
         this.addDrop(ModBlocks.BLUEBERRIES_CROP, this.cropDrops(ModBlocks.BLUEBERRIES_CROP, ModItems.BLUEBERRIES, ModItems.BLUEBERRY_SEEDS, builder2));

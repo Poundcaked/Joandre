@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "i": "minecraft:paper"
+  },
+  "pattern": [
+    "i i",
+    "i i",
+    "iii"
+  ],
+  "result": {
+    "count": 4,
+    "id": "joandre:empty_yogurt"
+  }
+}

@@ -29,7 +29,7 @@ public class YogurtMachineBlockEntityRenderer implements BlockEntityRenderer<Yog
         ItemStack stack = entity.getStack(0);
 
         matrices.push();
-        matrices.translate(0.5f, 1.15f, 0.5f);
+        matrices.translate(0.5f, 1.55f, 0.5f);
         matrices.scale(0.5f, 0.5f, 0.5f);
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(entity.getRenderingRotation()));
 

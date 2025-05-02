@@ -68,6 +68,8 @@ public class ModItems {
     );
     public static final Item JOANDREITE_INGOT = registerItem("joandreite_ingot", Item::new, new Item.Settings());
 
+    public static final Item JOANDREITE_SHARD = registerItem("joandreite_shard", Item::new, new Item.Settings());
+
     public static final Item PISRAT_HAMMER = registerItem("pisrat_hammer", PisratHammer::new,new Item.Settings()
             .maxCount(1)
             .maxDamage(3300)

@@ -41,6 +41,15 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .group("multi_bench")
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.JOANDREITE_INGOT,2)
+                        .pattern("i i")
+                        .pattern(" i ")
+                        .pattern("i i")
+                        .input('i',ModItems.JOANDREITE_SHARD)
+                        .criterion(hasItem(ModItems.JOANDREITE_SHARD), conditionsFromItem(ModItems.JOANDREITE_SHARD))
+                        .group("multi_bench")
+                        .offerTo(exporter,"shard_joandreite_ingot");
+
                 createShaped(RecipeCategory.MISC, ModItems.JOANDRE_PHONE, 1)
                         .pattern("iii")
                         .pattern("ici")
@@ -53,7 +62,15 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.COPPER_INGOT),conditionsFromItem(Items.COPPER_INGOT))
                         .group("multi_bench")
                         .offerTo(exporter);
-
+                createShaped(RecipeCategory.MISC, ModItems.EMPTY_YOGURT, 4)
+                        .pattern("i i")
+                        .pattern("i i")
+                        .pattern("iii")
+                        .input('i', Items.PAPER)
+                        .criterion(hasItem(Items.PAPER),conditionsFromItem(Items.PAPER))
+                        .group("multi_bench")
+                        .offerTo(exporter);
+//YOGURT BAGS
                 createShaped(RecipeCategory.MISC, ModItems.EMPTY_YOGURT_BAG, 1)
                         .pattern("i i")
                         .pattern("i i")
@@ -124,6 +141,8 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.JOANDREITE_INGOT),conditionsFromItem(ModItems.JOANDREITE_INGOT))
                         .group("multi_bench")
                         .offerTo(exporter);
+
+
             }
         };
     }

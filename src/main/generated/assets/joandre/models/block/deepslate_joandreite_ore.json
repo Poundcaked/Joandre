@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "joandre:block/deepslate_joandreite_ore"
+  }
+}

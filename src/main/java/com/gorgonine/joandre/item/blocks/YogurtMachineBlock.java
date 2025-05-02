@@ -93,16 +93,21 @@ public class YogurtMachineBlock extends BlockWithEntity implements BlockEntityPr
                 if(yogurtMachineBlockEntity.getItems().getFirst() != null){
                     ItemStack yogurtBagStack = yogurtMachineBlockEntity.getStack(0);
                     int yogurtLevel = yogurtMachineBlockEntity.getStack(0).getComponents().get(ModComponents.YOGURT_LEVEL_COMPONENT);
-                    yogurtBagStack.set(ModComponents.YOGURT_LEVEL_COMPONENT, yogurtLevel - 5);
-                    stack.decrement(1);
+                    if(yogurtLevel>0){
+                        yogurtBagStack.set(ModComponents.YOGURT_LEVEL_COMPONENT, yogurtLevel - 5);
+                        stack.decrement(1);
 
-                    if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.VANILLA_YOGURT_BAG)){
-                        player.getInventory().insertStack(new ItemStack(ModItems.VANILLA_YOGURT));
-                    }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.STRAWBERRY_YOGURT_BAG)){
-                        player.getInventory().insertStack(new ItemStack(ModItems.STRAWBERRY_YOGURT));
-                    }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.BLUEBERRY_YOGURT_BAG)){
-                        player.getInventory().insertStack(new ItemStack(ModItems.BLUEBERRY_YOGURT));
+                        if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.VANILLA_YOGURT_BAG)){
+                            player.getInventory().insertStack(new ItemStack(ModItems.VANILLA_YOGURT));
+                        }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.STRAWBERRY_YOGURT_BAG)){
+                            player.getInventory().insertStack(new ItemStack(ModItems.STRAWBERRY_YOGURT));
+                        }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.BLUEBERRY_YOGURT_BAG)){
+                            player.getInventory().insertStack(new ItemStack(ModItems.BLUEBERRY_YOGURT));
+                        }
+                    }else{
+                        yogurtMachineBlockEntity.setStack(0,new ItemStack(ModItems.EMPTY_YOGURT_BAG));
                     }
+
 
                 }
 

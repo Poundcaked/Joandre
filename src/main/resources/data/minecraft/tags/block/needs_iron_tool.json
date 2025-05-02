@@ -1,4 +1,8 @@
 {
   "replace": false,
-  "values": ["joandre:joandreite_block"]
+  "values": [
+    "joandre:joandreite_block",
+    "joandre:joandreite_ore",
+    "joandre:deepslate_joandreite_ore"
+  ]
 }
