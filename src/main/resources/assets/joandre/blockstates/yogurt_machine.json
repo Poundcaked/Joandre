@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "joandre:block/yogurt_machine"
-    }
+    "facing=north": { "model": "joandre:block/yogurt_machine"},
+    "facing=south": { "model": "joandre:block/yogurt_machine", "y": 180  },
+    "facing=west":  { "model": "joandre:block/yogurt_machine", "y": 270 },
+    "facing=east":  { "model": "joandre:block/yogurt_machine", "y": 90 }
   }
 }

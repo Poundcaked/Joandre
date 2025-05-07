@@ -56,8 +56,6 @@ public class JoandreModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.GULCH_YOU_AGAIN_MUSIC_DISC, Models.GENERATED);
 
-
-
     }
 
     @Override

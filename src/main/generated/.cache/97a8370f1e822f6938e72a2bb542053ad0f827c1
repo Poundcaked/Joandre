@@ -28,6 +28,7 @@ f208b6d920485a0ec48dfc2453c990d51070e0d4 assets/joandre/items/strawberry_yogurt_
 7e8192d3a12c36c876ea90909825af279919d1cf assets/joandre/items/vanilla_beans.json
 d4c0995503c0d5b1b2bcf6231e59a0c8e973a1d5 assets/joandre/items/vanilla_yogurt.json
 51d1db5f75e86b6a61cc3d41218ec1709ec9af1d assets/joandre/items/vanilla_yogurt_bag.json
+eb69b5c72d8d6d1a1ddf59637572a26e2e94f594 assets/joandre/items/yogurt_machine.json
 ee315b300ea86ac5dfdccb0e8ba6129374417c99 assets/joandre/models/block/blueberry_plant_stage0.json
 13d79e50fd5458a0838fc6e47ea032141154388f assets/joandre/models/block/blueberry_plant_stage1.json
 71aaec6c883a2b58b1133cbdc4423eadb4f558a7 assets/joandre/models/block/blueberry_plant_stage2.json
@@ -63,3 +64,4 @@ bcb73f2bb4a8b58c4de6aceb3d750c926eb8e299 assets/joandre/models/item/strawberry_y
 5a8ab9aa32ec651d9d146acad77e2cc286aa790e assets/joandre/models/item/vanilla_beans.json
 e777d7f8320c566c83786083b9e31cb9baa92d91 assets/joandre/models/item/vanilla_yogurt.json
 d8cf93c87efd6c7f55dec91e233120dcac516a7a assets/joandre/models/item/vanilla_yogurt_bag.json
+b91d93f2cde95f6b45a5039994258ac1bdead2ce assets/joandre/models/item/yogurt_machine.json

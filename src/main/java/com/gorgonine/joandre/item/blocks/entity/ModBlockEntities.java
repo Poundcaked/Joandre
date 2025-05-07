@@ -14,6 +14,8 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(Joandre.MOD_ID,"yogurt_machine_be"),
                     FabricBlockEntityTypeBuilder.create(YogurtMachineBlockEntity::new, ModBlocks.YOGURT_MACHINE).build());
 
+
+
     public static void registerBlockEntities(){
 
     }

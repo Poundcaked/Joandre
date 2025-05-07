@@ -24,6 +24,7 @@ public class JoandreEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.joandre.empty_yogurt", "Empty Cup of Yogurt");
         translationBuilder.add("item.joandre.strawberry_yogurt", "Strawberry Yogurt");
         translationBuilder.add("item.joandre.vanilla_yogurt", "Vanilla Yogurt");
+        translationBuilder.add("item.joandre.blueberry_yogurt", "Blueberry Yogurt");
 
         translationBuilder.add("item.joandre.yogurt_stain", "Yogurt Stain");
 

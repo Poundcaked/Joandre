@@ -6,58 +6,68 @@ import com.gorgonine.joandre.util.ModComponents;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.component.Component;
+import net.minecraft.block.entity.ChestBlockEntity;
+import net.minecraft.block.enums.ChestType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventories;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
-import net.minecraft.util.function.BooleanBiFunction;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class YogurtMachineBlock extends BlockWithEntity implements BlockEntityProvider {
-//    public static final VoxelShape SHAPE = makeShape();
+
     private static final VoxelShape SHAPE =
         Block.createCuboidShape(0, 0, 0, 16, 16, 16);
     public static final MapCodec<YogurtMachineBlock> CODEC = YogurtMachineBlock.createCodec(YogurtMachineBlock::new);
+    public static final EnumProperty<Direction> FACING = HorizontalFacingBlock.FACING;
 
 
     public YogurtMachineBlock(Settings settings) {
         super(settings);
     }
 
-//    public static VoxelShape makeShape(){
-//        VoxelShape shape = VoxelShapes.empty();
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0, 0, 0.375, 1, 1, 1), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0, 0, 0, 1, 0.1875, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.1875, 0.6875, 0.0625, 0.3125, 0.8125, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.1875, 0.5625, 0.0625, 0.3125, 0.6875, 0.1875), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.1875, 0.3125, 0.25, 0.3125, 0.4375, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.4375, 0.3125, 0.25, 0.5625, 0.4375, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.6875, 0.3125, 0.25, 0.8125, 0.4375, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.4375, 0.6875, 0.0625, 0.5625, 0.8125, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.4375, 0.5625, 0.0625, 0.5625, 0.6875, 0.1875), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.6875, 0.6875, 0.0625, 0.8125, 0.8125, 0.375), BooleanBiFunction.OR);
-//        shape = VoxelShapes.combine(shape, VoxelShapes.cuboid(0.6875, 0.5625, 0.0625, 0.8125, 0.6875, 0.1875), BooleanBiFunction.OR);
-//
-//        return shape;
-//    }
+    @Override
+    public MapCodec<YogurtMachineBlock> getCodec() {
+        return CODEC;
+    }
+
+    @Override
+    protected BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
+    }
 
     @Override
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+
+    }
 
     @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return null;
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING);
     }
 
     @Nullable
@@ -66,10 +76,6 @@ public class YogurtMachineBlock extends BlockWithEntity implements BlockEntityPr
         return new YogurtMachineBlockEntity(pos,state);
     }
 
-    @Override
-    protected BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
 
     @Override
     protected void onStateReplaced(BlockState state, ServerWorld world, BlockPos pos, boolean moved) {
@@ -84,34 +90,43 @@ public class YogurtMachineBlock extends BlockWithEntity implements BlockEntityPr
         }
     }
 
+
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(world.getBlockEntity(pos) instanceof YogurtMachineBlockEntity yogurtMachineBlockEntity) {
-            if(!world.isClient && !player.getStackInHand(player.getActiveHand()).isOf(ModItems.EMPTY_YOGURT)){
-                player.openHandledScreen(yogurtMachineBlockEntity);
-            }else if(!world.isClient && player.getStackInHand(player.getActiveHand()).isOf(ModItems.EMPTY_YOGURT)){
-                if(yogurtMachineBlockEntity.getItems().getFirst() != null){
-                    ItemStack yogurtBagStack = yogurtMachineBlockEntity.getStack(0);
-                    int yogurtLevel = yogurtMachineBlockEntity.getStack(0).getComponents().get(ModComponents.YOGURT_LEVEL_COMPONENT);
-                    if(yogurtLevel>0){
-                        yogurtBagStack.set(ModComponents.YOGURT_LEVEL_COMPONENT, yogurtLevel - 5);
-                        stack.decrement(1);
-
-                        if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.VANILLA_YOGURT_BAG)){
-                            player.getInventory().insertStack(new ItemStack(ModItems.VANILLA_YOGURT));
-                        }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.STRAWBERRY_YOGURT_BAG)){
-                            player.getInventory().insertStack(new ItemStack(ModItems.STRAWBERRY_YOGURT));
-                        }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.BLUEBERRY_YOGURT_BAG)){
-                            player.getInventory().insertStack(new ItemStack(ModItems.BLUEBERRY_YOGURT));
+            if(!world.isClient){
+                if(!player.getStackInHand(player.getActiveHand()).isOf(ModItems.EMPTY_YOGURT)){ //if player is not holding empty yogurt cup
+                    player.openHandledScreen(yogurtMachineBlockEntity);
+                    world.playSound(null,pos, SoundEvents.BLOCK_ENDER_CHEST_OPEN, SoundCategory.BLOCKS, 0.2f, 1f);
+                }else if(player.getStackInHand(player.getActiveHand()).isOf(ModItems.EMPTY_YOGURT)){ //If they are
+                    if(yogurtMachineBlockEntity.getItems().getFirst() != null){
+                        ItemStack yogurtBagStack = yogurtMachineBlockEntity.getStack(0);
+                        int yogurtLevel = yogurtMachineBlockEntity.getStack(0).getComponents().get(ModComponents.YOGURT_LEVEL_COMPONENT);
+                        if(yogurtLevel>0){
+                            yogurtBagStack.set(ModComponents.YOGURT_LEVEL_COMPONENT, yogurtLevel - 5);
+                            yogurtMachineBlockEntity.setStack(0, yogurtBagStack);
+                            yogurtMachineBlockEntity.markDirty();
+                            world.updateListeners(pos, state, yogurtMachineBlockEntity.getCachedState(), 0);
+                            stack.decrement(1);
+                            world.playSound(null,pos, SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 0.35f, 1f);
+                            if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.VANILLA_YOGURT_BAG)){
+                                player.getInventory().insertStack(new ItemStack(ModItems.VANILLA_YOGURT));
+                            }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.STRAWBERRY_YOGURT_BAG)){
+                                player.getInventory().insertStack(new ItemStack(ModItems.STRAWBERRY_YOGURT));
+                            }else if(yogurtMachineBlockEntity.getStack(0).isOf(ModItems.BLUEBERRY_YOGURT_BAG)){
+                                player.getInventory().insertStack(new ItemStack(ModItems.BLUEBERRY_YOGURT));
+                            }
+                            world.updateListeners(pos, state, yogurtMachineBlockEntity.getCachedState(), 0);
+                        }else{
+                            yogurtMachineBlockEntity.setStack(0,new ItemStack(ModItems.EMPTY_YOGURT_BAG));
+                            world.updateListeners(pos, state, yogurtMachineBlockEntity.getCachedState(), 0);
                         }
-                    }else{
-                        yogurtMachineBlockEntity.setStack(0,new ItemStack(ModItems.EMPTY_YOGURT_BAG));
+
                     }
 
-
                 }
-
             }
+
 
         }
 

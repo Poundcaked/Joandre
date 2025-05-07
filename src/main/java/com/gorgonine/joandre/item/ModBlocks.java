@@ -160,7 +160,11 @@ public class ModBlocks {
             "yogurt_machine",
             YogurtMachineBlock::new,
             AbstractBlock.Settings.create()
+                    .registryKey(keyOfBlock("yogurt_machine"))
+                    .strength(2f,2f)
+                    .requiresTool()
                     .nonOpaque(),
+
             true
     );
 
