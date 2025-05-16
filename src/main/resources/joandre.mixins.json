@@ -3,7 +3,10 @@
   "minVersion": "0.8",
   "package": "com.gorgonine.joandre.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
+  "mixins": [],
+  "client": [],
+  "server": [
+    "TreeConfiguredFeatureInjector"
   ],
   "injectors": {
     "defaultRequire": 1

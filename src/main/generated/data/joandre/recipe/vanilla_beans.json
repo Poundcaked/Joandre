@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "joandre:vanilla_flower"
+  ],
+  "result": {
+    "count": 4,
+    "id": "joandre:vanilla_beans"
+  }
+}

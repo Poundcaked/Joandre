@@ -1,7 +1,11 @@
 // 1.21.5	-999999999-01-01T00:00:00	Joandre/Block Loot Tables
+deef20d10108090da4bba27439a4e086872d93c5 data/joandre/loot_table/blocks/blueberry_bush.json
 3a81b77def496074cbe7bcb760c126e1500b7b82 data/joandre/loot_table/blocks/blueberry_plant.json
 7b015c774a912fba68f7cc999144eb736e275794 data/joandre/loot_table/blocks/deepslate_joandreite_ore.json
 56324f0bfcf20f68690cf964e76354a516424166 data/joandre/loot_table/blocks/joandreite_block.json
 7b015c774a912fba68f7cc999144eb736e275794 data/joandre/loot_table/blocks/joandreite_ore.json
+6d4d8e48d8648e8e108c980227d1734e81e39e17 data/joandre/loot_table/blocks/pisrat_core.json
+7501e9fe1feac83b90584cbc949800aa2e00ab9f data/joandre/loot_table/blocks/strawberry_bush.json
 fbdd627d2b159a764e9bcfafd4b802e335fc70e0 data/joandre/loot_table/blocks/strawberry_plant.json
+a99fcf77f1403d9aa4cdd946563cd6e31d9d0f08 data/joandre/loot_table/blocks/vanilla_flower.json
 306a8aa4e1902ae3a8b6561fac35a23fc3c520e5 data/joandre/loot_table/blocks/vanilla_plant.json

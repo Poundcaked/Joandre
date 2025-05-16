@@ -2,7 +2,9 @@ package com.gorgonine.joandre.datagen;
 
 import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItems;
+import com.gorgonine.joandre.item.blocks.BlueberryBushBlock;
 import com.gorgonine.joandre.item.blocks.BlueberryCropBlock;
+import com.gorgonine.joandre.item.blocks.StrawberryBushBlock;
 import com.gorgonine.joandre.item.blocks.StrawberryCropBlock;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -27,6 +29,12 @@ public class JoandreModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.VANILLA_YOGURT_STAIN);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.BLUEBERRY_YOGURT_STAIN);
         blockStateModelGenerator.registerMultifaceBlock(ModBlocks.STRAWBERRY_YOGURT_STAIN);
+
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.BLUEBERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED, BlueberryBushBlock.AGE, 0,1,2,3);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.STRAWBERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED, StrawberryBushBlock.AGE, 0,1,2,3);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.VANILLA_FLOWER,BlockStateModelGenerator.CrossType.NOT_TINTED);
+
 
     }
 

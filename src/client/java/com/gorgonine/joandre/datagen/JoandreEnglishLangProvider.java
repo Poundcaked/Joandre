@@ -17,6 +17,7 @@ public class JoandreEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.joandre.disgusting_joandre_phone", "Joandre's Disgusting Phone");
 
         translationBuilder.add("item.joandre.pisrat_hammer","Pisrat Hammer");
+        translationBuilder.add("item.joandre.pisrat_core","Pisrat Core");
 
         translationBuilder.add("item.joandre.gulch_you_again_music_disc", "Gulch You Again Music Disc");
         translationBuilder.add("item.joandre.gulch_you_again_music_disc.desc", "Gulch You Again - Pisrat, the Belcher");
@@ -31,13 +32,16 @@ public class JoandreEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.joandre.blueberries", "Blueberries");
         translationBuilder.add("item.joandre.blueberry_seeds","Blueberry Seeds");
         translationBuilder.add("item.joandre.blueberry_crop","Blueberry Plant");
+        translationBuilder.add("item.joandre.blueberry_bush", "Blueberry Bush");
 
         translationBuilder.add("item.joandre.strawberries", "Strawberries");
         translationBuilder.add("item.joandre.strawberry_seeds","Strawberry Seeds");
         translationBuilder.add("item.joandre.strawberry_crop","Strawberry Plant");
+        translationBuilder.add("item.joandre.strawberry_bush", "Strawberry Bush");
 
         translationBuilder.add("item.joandre.vanilla_beans", "Vanilla Beans");
         translationBuilder.add("item.joandre.vanilla_plant","Vanilla Plant");
+        translationBuilder.add("item.joandre.vanilla_flower","Vanilla Flower");
 
         translationBuilder.add("item.joandre.empty_yogurt_bag", "Empty Yogurt Bag");
         translationBuilder.add("item.joandre.strawberry_yogurt_bag", "Strawberry Yogurt Bag");

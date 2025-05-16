@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "joandre:vanilla_beans"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vanilla_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": "joandre:vanilla_flower"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vanilla_flower"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "joandre:vanilla_beans"
+    ]
+  }
+}

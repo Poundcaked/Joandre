@@ -1,3 +1,9 @@
 // 1.21.5	-999999999-01-01T00:00:00	Joandre/
+23e6f5c66e86ecb52820b5cc1087a92c393be186 data/joandre/worldgen/configured_feature/blueberry_bush.json
 3aa77673d442a4abaeba6433b8d9db44e7e2b56c data/joandre/worldgen/configured_feature/joandreite_ore.json
+ee9bb95c4da72eec65432d78570ea9023317fa89 data/joandre/worldgen/configured_feature/strawberry_bush.json
+22c27f380cbea2d6dd5bb1acfec7810fbe256270 data/joandre/worldgen/configured_feature/vanilla_flower.json
+d836b1ca6636adbf8b1ecbf715dbf23e374395ad data/joandre/worldgen/placed_feature/blueberry_bush_placed.json
 3745c9ef33beaca20c803fbcbeae8a27b40248c5 data/joandre/worldgen/placed_feature/joandreite_ore_placed.json
+686d4db37f91cef00aed8536107773f681be99de data/joandre/worldgen/placed_feature/strawberry_bush_placed.json
+ca09973fde0840b248bb762c12bb4c5413c7ee1f data/joandre/worldgen/placed_feature/vanilla_flower_placed.json

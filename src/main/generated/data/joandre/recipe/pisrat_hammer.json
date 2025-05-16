@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "i": "joandre:joandreite_block",
+    "o": "joandre:pisrat_core"
+  },
+  "pattern": [
+    "ioi",
+    " i ",
+    " i "
+  ],
+  "result": {
+    "count": 1,
+    "id": "joandre:pisrat_hammer"
+  }
+}

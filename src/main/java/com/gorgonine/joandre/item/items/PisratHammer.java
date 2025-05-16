@@ -84,13 +84,20 @@ public class PisratHammer extends Item {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) context.getPlayer();
             ItemCooldownManager itemCooldownManager = serverPlayerEntity.getItemCooldownManager();
 
-            serverPlayerEntity.addVelocity(new Vec3d(0.0,-(1/(serverPlayerEntity.getVelocity().y)+0.1),0.0));
+            serverPlayerEntity.addVelocity(new Vec3d(
+                    0.0,
+
+                    Math.abs(1/(serverPlayerEntity.getVelocity().y)+0.1),
+
+                    0.0
+            ));
 
             ServerWorld serverWorld = (ServerWorld) world;
 
             serverWorld.spawnParticles(ParticleTypes.EXPLOSION,serverPlayerEntity.getX(),serverPlayerEntity.getY(),serverPlayerEntity.getZ(), 100, 0.3F, 0.3F, 0.3F, 0.15F);
             itemCooldownManager.set(context.getStack(),200);
 
+            serverPlayerEntity.currentExplosionImpactPos = this.getCurrentExplosionImpactPos(serverPlayerEntity);
             serverPlayerEntity.setIgnoreFallDamageFromCurrentExplosion(true);
             serverPlayerEntity.networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(serverPlayerEntity));
 

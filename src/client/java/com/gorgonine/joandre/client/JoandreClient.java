@@ -23,6 +23,10 @@ public class JoandreClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YOGURT_MACHINE, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUEBERRY_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.STRAWBERRY_BUSH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VANILLA_FLOWER, RenderLayer.getCutout());
+
         ModClientEvents.initialize();
 
         BlockEntityRendererFactories.register(ModBlockEntities.YOGURT_MACHINE_BE, YogurtMachineBlockEntityRenderer::new);

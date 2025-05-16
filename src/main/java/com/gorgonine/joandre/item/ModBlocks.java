@@ -4,7 +4,9 @@ import com.gorgonine.joandre.Joandre;
 import com.gorgonine.joandre.item.blocks.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -49,10 +51,10 @@ public class ModBlocks {
             Block::new,
             AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.METAL)
-                    .strength(1f)
+                    .strength(4f)
                     .requiresTool()
                     .mapColor(MapColor.CYAN)
-                    .hardness(1f),
+                    .hardness(4f),
             true
 
     );
@@ -156,15 +158,50 @@ public class ModBlocks {
             false
     );
 
+    public static final Block BLUEBERRY_BUSH = register(
+            "blueberry_bush",
+            BlueberryBushBlock::new,
+            AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH),
+            true
+    );
+
+    public static final Block STRAWBERRY_BUSH = register(
+            "strawberry_bush",
+            StrawberryBushBlock::new,
+            AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH),
+            true
+    );
+
     public static final Block YOGURT_MACHINE = register(
             "yogurt_machine",
             YogurtMachineBlock::new,
             AbstractBlock.Settings.create()
                     .registryKey(keyOfBlock("yogurt_machine"))
-                    .strength(2f,2f)
+                    .strength(5f,5f)
                     .requiresTool()
                     .nonOpaque(),
 
+            true
+    );
+
+    public static final Block VANILLA_FLOWER = register(
+            "vanilla_flower",
+            settings -> new FlowerBlock(StatusEffects.SPEED, 2.0F, settings),
+            AbstractBlock.Settings.copy(Blocks.POPPY),
+            true
+    );
+
+    public static final Block PISRAT_CORE = register(
+            "pisrat_core",
+            HeavyCoreBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.IRON_GRAY)
+                    .instrument(NoteBlockInstrument.SNARE)
+                    .sounds(BlockSoundGroup.HEAVY_CORE)
+                    .strength(10.0F)
+                    .pistonBehavior(PistonBehavior.NORMAL)
+                    .requiresTool()
+                    .resistance(1200.0F),
             true
     );
 

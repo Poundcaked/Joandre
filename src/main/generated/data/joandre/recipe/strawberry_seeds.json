@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "joandre:strawberries"
+  ],
+  "result": {
+    "count": 12,
+    "id": "joandre:strawberry_seeds"
+  }
+}

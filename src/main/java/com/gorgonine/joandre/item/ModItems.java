@@ -82,20 +82,19 @@ public class ModItems {
 
     //YOGURT **CUPS**
     public static final Item EMPTY_YOGURT = registerItem("empty_yogurt", Item::new, new Item.Settings());
-    public static final Item STRAWBERRY_YOGURT = registerItem("strawberry_yogurt", StrawberryYogurt::new, new Item.Settings().food(ModFoodComponents.STRAWBERRY_YOGURT));
-    public static final Item VANILLA_YOGURT = registerItem("vanilla_yogurt", VanillaYogurt::new, new Item.Settings().food(ModFoodComponents.VANILLA_YOGURT));
-    public static final Item BLUEBERRY_YOGURT = registerItem("blueberry_yogurt", BlueberryYogurt::new, new Item.Settings().food(ModFoodComponents.BLUEBERRY_YOGURT));
+    public static final Item STRAWBERRY_YOGURT = registerItem("strawberry_yogurt", StrawberryYogurt::new, new Item.Settings().food(ModFoodComponents.STRAWBERRY_YOGURT, ModConsumableComponents.STRAWBERRY_YOGURT));
+    public static final Item VANILLA_YOGURT = registerItem("vanilla_yogurt", VanillaYogurt::new, new Item.Settings().food(ModFoodComponents.VANILLA_YOGURT, ModConsumableComponents.VANILLA_YOGURT));
+    public static final Item BLUEBERRY_YOGURT = registerItem("blueberry_yogurt", BlueberryYogurt::new, new Item.Settings().food(ModFoodComponents.BLUEBERRY_YOGURT, ModConsumableComponents.BLUEBERRY_YOGURT));
 
     //CROPS
 
     public static final Item BLUEBERRIES = registerItem("blueberries", Item::new, new Item.Settings()
-            .food(ModFoodComponents.BLUEBERRIES)
+            .food(ModFoodComponents.BLUEBERRIES, ModConsumableComponents.BLUEBERRY)
             .maxCount(16)
-
     );
 
     public static final Item STRAWBERRIES = registerItem("strawberries", Item::new, new Item.Settings()
-            .food(ModFoodComponents.STRAWBERRIES)
+            .food(ModFoodComponents.STRAWBERRIES, ModConsumableComponents.STRAWBERRY)
             .maxCount(16)
 
     );

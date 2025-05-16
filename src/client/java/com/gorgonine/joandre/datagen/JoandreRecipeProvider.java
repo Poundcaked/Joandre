@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.gorgonine.joandre.item.ModBlocks;
 import com.gorgonine.joandre.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Item;
@@ -131,6 +132,21 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.VANILLA_BEANS), conditionsFromItem(ModItems.VANILLA_BEANS))
                         .offerTo(exporter,"shapeless_vanilla_bag");
 
+                createShapeless(RecipeCategory.FOOD, ModItems.BLUEBERRY_SEEDS,4)
+                        .input(ModItems.BLUEBERRIES)
+                        .criterion(hasItem(ModItems.BLUEBERRIES), conditionsFromItem(ModItems.BLUEBERRIES))
+                        .offerTo(exporter);
+                createShapeless(RecipeCategory.FOOD, ModItems.STRAWBERRY_SEEDS,12)
+                        .input(ModItems.STRAWBERRIES)
+                        .criterion(hasItem(ModItems.STRAWBERRIES), conditionsFromItem(ModItems.STRAWBERRIES))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.FOOD, ModItems.VANILLA_BEANS,4)
+                        .input(ModBlocks.VANILLA_FLOWER.asItem())
+                        .criterion(hasItem(ModBlocks.VANILLA_FLOWER.asItem()), conditionsFromItem(ModBlocks.VANILLA_FLOWER.asItem()))
+                        .offerTo(exporter);
+
+
                 createShaped(RecipeCategory.MISC, ModItems.GULCH_YOU_AGAIN_MUSIC_DISC, 1)
                         .pattern("iii")
                         .pattern("ioi")
@@ -139,6 +155,29 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .input('o', ModItems.JOANDREITE_INGOT)
                         .criterion(hasItem(Items.FLINT),conditionsFromItem(Items.FLINT))
                         .criterion(hasItem(ModItems.JOANDREITE_INGOT),conditionsFromItem(ModItems.JOANDREITE_INGOT))
+                        .group("multi_bench")
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.COMBAT, ModItems.PISRAT_HAMMER, 1)
+                        .pattern("ioi")
+                        .pattern(" i ")
+                        .pattern(" i ")
+                        .input('i', ModBlocks.JOANDREITE_BLOCK)
+                        .input('o', ModBlocks.PISRAT_CORE)
+                        .criterion(hasItem(ModBlocks.PISRAT_CORE),conditionsFromItem(ModBlocks.PISRAT_CORE))
+                        .criterion(hasItem(ModBlocks.JOANDREITE_BLOCK),conditionsFromItem(ModBlocks.JOANDREITE_BLOCK))
+                        .group("multi_bench")
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModBlocks.YOGURT_MACHINE, 1)
+                        .pattern(" Ii")
+                        .pattern("  i")
+                        .pattern("sss")
+                        .input('i', ModBlocks.JOANDREITE_BLOCK)
+                        .input('I', Items.IRON_INGOT)
+                        .input('s', Blocks.SMOOTH_STONE)
+                        .criterion(hasItem(ModBlocks.JOANDREITE_BLOCK),conditionsFromItem(ModBlocks.JOANDREITE_BLOCK))
+                        .criterion(hasItem(Items.IRON_INGOT),conditionsFromItem(Items.IRON_INGOT))
+                        .criterion(hasItem(Blocks.SMOOTH_STONE),conditionsFromItem(Blocks.SMOOTH_STONE))
                         .group("multi_bench")
                         .offerTo(exporter);
 
