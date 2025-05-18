@@ -205,5 +205,12 @@ public class ModBlocks {
             true
     );
 
+    public static final Block JOANDRE_SLIME = register(
+            "joandre_slime",
+            JoandreSlime::new,
+            AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK),
+            true
+    );
+
 
 }

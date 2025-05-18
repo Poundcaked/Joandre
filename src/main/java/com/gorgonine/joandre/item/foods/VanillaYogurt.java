@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.world.World;
 
 public class VanillaYogurt extends Item{
@@ -17,14 +18,10 @@ public class VanillaYogurt extends Item{
         super.finishUsing(stack,world,user);
 
         if(user instanceof PlayerEntity player && !player.getAbilities().creativeMode){
-
             ItemStack emptyYogurt = new ItemStack(ModItems.EMPTY_YOGURT);
-
-            if(!player.getInventory().insertStack(emptyYogurt)){
-                player.dropItem(emptyYogurt, false);
-            }
+            player.getInventory().insertStack(emptyYogurt);
         }
-        return stack.isEmpty() ? new ItemStack(ModItems.EMPTY_YOGURT) : stack;
+        return stack;
     }
 
 

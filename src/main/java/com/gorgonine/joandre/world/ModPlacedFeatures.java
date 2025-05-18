@@ -22,7 +22,7 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context,JOANDREITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.JOANDREITE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(4, //veins per chunk
+                ModOrePlacement.modifiersWithCount(11   , //veins per chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80)))
                 );
 

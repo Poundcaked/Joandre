@@ -16,6 +16,8 @@ public class JoandreEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.joandre.joandre_phone", "Joandre's Phone");
         translationBuilder.add("item.joandre.disgusting_joandre_phone", "Joandre's Disgusting Phone");
 
+        translationBuilder.add("item.joandre.joandre_slime", "Joandre Slime Block");
+
         translationBuilder.add("item.joandre.pisrat_hammer","Pisrat Hammer");
         translationBuilder.add("item.joandre.pisrat_core","Pisrat Core");
 

@@ -84,7 +84,7 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.FOOD, ModItems.BLUEBERRY_YOGURT_BAG ,1)
-                        .pattern("i i")
+                        .pattern("ibi")
                         .pattern("ibi")
                         .pattern(" I ")
                         .input('i', Items.PAPER)
@@ -94,7 +94,7 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.FOOD, ModItems.STRAWBERRY_YOGURT_BAG ,1)
-                        .pattern("i i")
+                        .pattern("isi")
                         .pattern("isi")
                         .pattern(" I ")
                         .input('i', Items.PAPER)
@@ -104,7 +104,7 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 createShaped(RecipeCategory.FOOD, ModItems.VANILLA_YOGURT_BAG ,1)
-                        .pattern("i i")
+                        .pattern("ivi")
                         .pattern("ivi")
                         .pattern(" I ")
                         .input('i', Items.PAPER)
@@ -115,19 +115,19 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
 //SHAPELESS BAGS
                 createShapeless(RecipeCategory.MISC, ModItems.STRAWBERRY_YOGURT_BAG, 1)
                         .input(ModItems.EMPTY_YOGURT_BAG)
-                        .input(ModItems.STRAWBERRIES,3)
+                        .input(ModItems.STRAWBERRIES,2)
                         .criterion(hasItem(ModItems.EMPTY_YOGURT_BAG), conditionsFromItem(ModItems.EMPTY_YOGURT_BAG))
                         .criterion(hasItem(ModItems.STRAWBERRIES), conditionsFromItem(ModItems.STRAWBERRIES))
                         .offerTo(exporter,"shapeless_strawberry_bag");
                 createShapeless(RecipeCategory.MISC, ModItems.BLUEBERRY_YOGURT_BAG, 1)
                         .input(ModItems.EMPTY_YOGURT_BAG)
-                        .input(ModItems.BLUEBERRIES,3)
+                        .input(ModItems.BLUEBERRIES,2)
                         .criterion(hasItem(ModItems.EMPTY_YOGURT_BAG), conditionsFromItem(ModItems.EMPTY_YOGURT_BAG))
                         .criterion(hasItem(ModItems.BLUEBERRIES), conditionsFromItem(ModItems.BLUEBERRIES))
                         .offerTo(exporter,"shapeless_blueberry_bag");
                 createShapeless(RecipeCategory.MISC, ModItems.VANILLA_YOGURT_BAG, 1)
                         .input(ModItems.EMPTY_YOGURT_BAG)
-                        .input(ModItems.VANILLA_BEANS,3)
+                        .input(ModItems.VANILLA_BEANS,2)
                         .criterion(hasItem(ModItems.EMPTY_YOGURT_BAG), conditionsFromItem(ModItems.EMPTY_YOGURT_BAG))
                         .criterion(hasItem(ModItems.VANILLA_BEANS), conditionsFromItem(ModItems.VANILLA_BEANS))
                         .offerTo(exporter,"shapeless_vanilla_bag");
@@ -178,6 +178,21 @@ public class JoandreRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.JOANDREITE_BLOCK),conditionsFromItem(ModBlocks.JOANDREITE_BLOCK))
                         .criterion(hasItem(Items.IRON_INGOT),conditionsFromItem(Items.IRON_INGOT))
                         .criterion(hasItem(Blocks.SMOOTH_STONE),conditionsFromItem(Blocks.SMOOTH_STONE))
+                        .group("multi_bench")
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.PISRAT_CORE, 1)
+                        .pattern("wNw")
+                        .pattern("ini")
+                        .pattern("wNw")
+                        .input('n', Items.NETHER_STAR)
+                        .input('N', Items.NETHERITE_INGOT)
+                        .input('w', Blocks.WHITE_CONCRETE)
+                        .input('i', ModItems.JOANDREITE_INGOT)
+                        .criterion(hasItem(ModItems.JOANDREITE_INGOT),conditionsFromItem(ModItems.JOANDREITE_INGOT))
+                        .criterion(hasItem(Items.NETHER_STAR),conditionsFromItem(Items.NETHER_STAR))
+                        .criterion(hasItem(Items.NETHERITE_INGOT),conditionsFromItem(Items.NETHERITE_INGOT))
+                        .criterion(hasItem(Blocks.WHITE_BANNER),conditionsFromItem(Blocks.WHITE_BANNER))
                         .group("multi_bench")
                         .offerTo(exporter);
 

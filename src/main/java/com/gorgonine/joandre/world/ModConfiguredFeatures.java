@@ -32,7 +32,7 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.JOANDREITE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_JOANDREITE_ORE.getDefaultState()));
 
-        register(context, JOANDREITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJoandreiteOres,3)); //ore vein size
+        register(context, JOANDREITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJoandreiteOres, 4)); //ore vein size
 
         register(context, BLUEBERRY_BUSH_KEY, Feature.RANDOM_PATCH,
                 ConfiguredFeatures.createRandomPatchFeatureConfig(

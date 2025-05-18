@@ -35,6 +35,7 @@ public class JoandreModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.VANILLA_FLOWER,BlockStateModelGenerator.CrossType.NOT_TINTED);
 
+        blockStateModelGenerator.registerSimpleState(ModBlocks.JOANDRE_SLIME);
 
     }
 

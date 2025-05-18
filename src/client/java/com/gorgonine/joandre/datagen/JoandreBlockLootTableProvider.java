@@ -53,6 +53,7 @@ public class JoandreBlockLootTableProvider extends FabricBlockLootTableProvider 
 
         addDrop(ModBlocks.PISRAT_CORE);
         addDrop(ModBlocks.YOGURT_MACHINE);
+        addDrop(ModBlocks.JOANDRE_SLIME);
 
 
         this.addDrop(

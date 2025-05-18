@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
+  "category": "misc",
   "group": "multi_bench",
   "key": {
+    "I": "minecraft:iron_ingot",
     "i": "joandre:joandreite_block",
-    "o": "joandre:pisrat_core"
+    "s": "minecraft:smooth_stone"
   },
   "pattern": [
-    "ioi",
-    " i ",
-    " i "
+    " Ii",
+    "  i",
+    "sss"
   ],
   "result": {
     "count": 1,
-    "id": "joandre:pisrat_hammer"
+    "id": "joandre:yogurt_machine"
   }
 }

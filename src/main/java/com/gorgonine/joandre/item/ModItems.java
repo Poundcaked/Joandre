@@ -59,7 +59,7 @@ public class ModItems {
             .jukeboxPlayable(ModSounds.GULCH_YOU_AGAIN_KEY).maxCount(1)
     );
 
-    public static final Item DISGUSTING_JOANDRE_PHONE = registerItem("disgusting_joandre_phone", Item::new, new Item.Settings()
+    public static final Item DISGUSTING_JOANDRE_PHONE = registerItem("disgusting_joandre_phone", DisgustingJoandrePhone::new, new Item.Settings()
             .maxCount(1)
     );
 
