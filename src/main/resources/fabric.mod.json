@@ -4,9 +4,11 @@
   "version": "${version}",
   "name": "Joandre",
   "description": "",
-  "authors": [],
+  "authors": [
+    "Poundcake"
+  ],
   "contact": {},
-  "license": "All-Rights-Reserved",
+  "license": "MIT",
   "icon": "assets/joandre/icon.png",
   "environment": "*",
   "entrypoints": {

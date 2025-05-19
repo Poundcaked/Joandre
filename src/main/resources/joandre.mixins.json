@@ -6,7 +6,7 @@
   "mixins": [],
   "client": [],
   "server": [
-    "TreeConfiguredFeatureInjector"
+    ""
   ],
   "injectors": {
     "defaultRequire": 1
